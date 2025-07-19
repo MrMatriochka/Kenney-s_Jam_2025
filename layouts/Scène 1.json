@@ -7,11 +7,11 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Tuilage",
+					"type": "Background",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -27,14 +27,14 @@
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 27,
-							"height": 15,
-							"max-width": 57,
-							"max-height": 78,
-							"data": "56x45hd,22x0,9x45hd,46,46x45hd,22x0,3x45hd,46,32x45hd,46,19x45hd,22x0,47x45hd,46,8x45hd,22x0,8x45hd,8,2x18,41,9x45hd,46,8x45hd,2x46,15x45hd,46,8x45hd,22x0,8x45hd,28,2x65,7,18,41,42x45hd,22x0,8x45hd,28,4x65,6,24x45hd,46,17x45hd,22x0,6x45hd,46,45hd,11,27,2x65,5,44,19x45hd,47,22x45hd,22x0,9x45hd,11,2x16,44,16x45hd,46,26x45hd,22x0,56x45hd,22x0,57x45hd,21x0,64x3vd,14x0,45hd,14x45,41x45hd,22x0,45hd,14x45,41x45hd,22x0,56x3hd,22x0,62x45hd,16x0,62x45hd,16x0,3x45hd,47,6x45hd,46,51x45hd,16x0,62x45hd,16x0,21x45hd,46,13x45hd,46,26x45hd,16x0,6x45hd,46,31x45hd,13,4x23,35,2x45hd,13,3x23,35,11x45hd,16x0,14x45hd,3,23x45hd,3,4x69,3,2x45hd,3,3x69,3,11x45hd,16x0,17x45hd,47,20x45hd,3,4x69,3,45hd,46,3,3x69,3,11x45hd,16x0,3x45hd,2x46,9x45hd,46,17x45hd,46,5x45hd,3,4x69,15,2x23,37,3x69,3,11x45hd,16x0,38x45hd,15,35,10x69,3,11x45hd,16x0,39x45hd,3,10x69,3,11x45hd,16x0,39x45hd,3,10x69,3,11x45hd,32x0,25x45hd,69,8x45hd,3,11x45hd,32x0,34x45hd,3,11x45hd,32x0,46x45hd,2122x0"
+							"width": 54,
+							"height": 30,
+							"max-width": 98,
+							"max-height": 101,
+							"data": "30x2,26x45hd,45x0,30x2,26x45hd,45x0,30x2,6x45hd,46,19x45hd,45x0,30x2,17x45hd,46,8x45hd,45x0,8x2,3,21x2,2x46,15x45hd,46,8x45hd,45x0,30x2,26x45hd,45x0,18x2,3,11x2,8x45hd,46,17x45hd,45x0,12x2,3,17x2,3x45hd,47,22x45hd,45x0,2x2,3,27x2,26x45hd,45x0,24x2,3,5x2,26x45hd,45x0,30x2,27x45hd,44x0,30x2,34x3vd,37x0,30x2,26x45hd,45x0,30x2,26x45hd,45x0,9x2,3,20x2,26x3hd,45x0,18x2,3,11x2,32x45hd,39x0,11x2,3,12x2,2x3,4x2,32x45hd,39x0,31x2,31x45hd,39x0,31x2,31x45hd,39x0,31x2,4x45hd,46,26x45hd,39x0,31x2,7x45hd,13,4x23,35,2x45hd,13,3x23,35,11x45hd,39x0,31x2,7x45hd,3,4x69,3,2x45hd,3,3x69,3,11x45hd,39x0,31x2,7x45hd,3,4x69,3,45hd,46,3,3x69,3,11x45hd,39x0,3,29x2,2x45hd,46,5x45hd,3,4x69,15,2x23,37,3x69,3,11x45hd,39x0,32x208,6x45hd,15,35,10x69,3,11x45hd,39x0,30x2,9x45hd,3,10x69,3,11x45hd,39x0,2x2,3,27x2,9x45hd,3,10x69,3,11x45hd,39x0,32x208,9x45hd,69,8x45hd,3,11x45hd,39x0,35x2,15x45hd,3,11x45hd,39x0,35x2,2x1,25x45hd,39x0,35x2,2x1,64x0,35x2,66x0,35x2,66x0,30x2,71x0,30x2,71x0,30x2,71x0,15x2,3,14x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,19x2,3,10x2,71x0,30x2,71x0,13x2,2x3,8x2,3,6x2,71x0,13x2,2x3,8x2,3,6x2,71x0,23x2,3,6x2,71x0,7x2,3,15x2,3,6x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,30x2,71x0,30x2,4515x0"
 						},
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -63,11 +63,11 @@
 					}
 				},
 				{
-					"type": "Tuilage2",
+					"type": "Background2",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -83,14 +83,14 @@
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 27,
-							"height": 15,
-							"max-width": 57,
-							"max-height": 79,
-							"data": "56x45hd,23x0,9x45hd,46,46x45hd,23x0,3x45hd,46,32x45hd,46,19x45hd,23x0,47x45hd,46,8x45hd,23x0,8x45hd,8,2x18,41,9x45hd,46,8x45hd,2x46,15x45hd,46,8x45hd,23x0,8x45hd,28,2x65,7,18,41,42x45hd,23x0,8x45hd,28,4x65,6,24x45hd,46,17x45hd,23x0,6x45hd,46,45hd,11,27,2x65,5,44,19x45hd,47,22x45hd,23x0,9x45hd,11,2x16,44,16x45hd,46,26x45hd,23x0,56x45hd,23x0,57x45hd,22x0,64x3vd,15x0,8x45hd,5x45,43x45hd,23x0,8x45hd,5x45,43x45hd,23x0,56x3hd,23x0,62x45hd,17x0,19x45hd,45,42x45hd,17x0,3x45hd,47,6x45hd,46,51x45hd,17x0,62x45hd,17x0,21x45hd,46,13x45hd,46,26x45hd,17x0,6x45hd,46,31x45hd,13,4x23,35,2x45hd,13,3x23,35,11x45hd,17x0,14x45hd,3,23x45hd,3,4x69,3,2x45hd,3,3x69,3,11x45hd,17x0,17x45hd,47,20x45hd,3,4x69,3,45hd,46,3,3x69,3,11x45hd,17x0,3x45hd,2x46,9x45hd,46,17x45hd,46,5x45hd,3,4x69,15,2x23,37,3x69,3,11x45hd,17x0,38x45hd,15,35,10x69,3,11x45hd,17x0,39x45hd,3,10x69,3,11x45hd,17x0,39x45hd,3,10x69,3,11x45hd,33x0,25x45hd,69,8x45hd,3,11x45hd,33x0,34x45hd,3,11x45hd,33x0,46x45hd,340x0,45,1809x0"
+							"width": 54,
+							"height": 30,
+							"max-width": 84,
+							"max-height": 94,
+							"data": "30x2,26x45hd,38x0,30x2,26x45hd,38x0,12x2,3,17x2,6x45hd,46,19x45hd,38x0,30x2,17x45hd,46,8x45hd,38x0,30x2,2x46,15x45hd,46,8x45hd,38x0,30x2,26x45hd,38x0,7x2,3,22x2,8x45hd,46,17x45hd,38x0,21x2,3,8x2,3x45hd,47,22x45hd,38x0,30x2,26x45hd,38x0,30x2,26x45hd,38x0,30x2,27x45hd,37x0,10x2,3,19x2,34x3vd,30x0,30x2,26x45hd,38x0,30x2,26x45hd,38x0,30x2,26x3hd,38x0,18x2,3,11x2,32x45hd,32x0,30x2,32x45hd,32x0,7x2,3,22x2,32x45hd,32x0,30x2,32x45hd,32x0,30x2,5x45hd,46,26x45hd,32x0,31x2,7x45hd,13,4x23,35,2x45hd,13,3x23,35,11x45hd,32x0,31x2,7x45hd,3,4x69,3,2x45hd,3,3x69,3,11x45hd,32x0,31x2,7x45hd,3,4x69,3,45hd,46,3,3x69,3,11x45hd,32x0,30x2,2x45hd,46,5x45hd,3,4x69,15,2x23,37,3x69,3,11x45hd,32x0,30x208,8x45hd,15,35,10x69,3,11x45hd,32x0,16x2,3,13x2,9x45hd,3,10x69,3,11x45hd,32x0,30x2,9x45hd,3,10x69,3,11x45hd,32x0,30x208,11x45hd,69,8x45hd,3,11x45hd,32x0,31x2,19x45hd,3,11x45hd,32x0,31x2,31x45hd,32x0,31x2,63x0,31x2,63x0,31x2,63x0,12x2,3,17x2,64x0,30x2,64x0,30x2,64x0,30x2,64x0,26x2,3,3x2,64x0,11x2,3,18x2,64x0,11x2,3,7x2,3,10x2,64x0,11x2,3,18x2,64x0,11x2,3,18x2,64x0,14x2,3,15x2,64x0,22x2,3,7x2,64x0,30x2,64x0,30x2,64x0,3x2,3,26x2,64x0,30x2,64x0,30x2,64x0,30x2,64x0,30x2,64x0,30x2,64x0,30x2,64x0,30x2,2884x0"
 						},
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -183,9 +183,9 @@
 						"tilemapData": {
 							"width": 8,
 							"height": 11,
-							"max-width": 137,
-							"max-height": 80,
-							"data": "97,9x109,121,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,99,9x111,123,10389x0"
+							"max-width": 149,
+							"max-height": 98,
+							"data": "97,9x109,121,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,99,9x111,123,676x0,49,6x61,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,51,6x63,12732x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -246,9 +246,9 @@
 						"tilemapData": {
 							"width": 8,
 							"height": 11,
-							"max-width": 137,
-							"max-height": 80,
-							"data": "97,9x109,121,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,98,9x110,122,69x0,99,9x111,123,10389x0"
+							"max-width": 165,
+							"max-height": 103,
+							"data": "97,9x109,121,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,99,9x111,123,16263x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -619,6 +619,153 @@
 				}
 			],
 			"sid": 105265873002217,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "ForeGround",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Baseball",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"sid": 533354741053210,
+					"tags": "",
+					"instanceVariables": {
+						"Active": false,
+						"Used": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 533354741053210,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 832,
+						"y": 448,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 612007397624276,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Cursor",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Curseur",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"sid": 819698490678358,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 819698490678358,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 672,
+						"y": 160,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 682733102833327,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

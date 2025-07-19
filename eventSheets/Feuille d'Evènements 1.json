@@ -12,6 +12,161 @@
 			"sid": 872586394756857
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Curseur2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 394349678017573
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Souris",
+							"sid": 181194758853298,
+							"parameters": {
+								"cursor-style": "none"
+							}
+						}
+					],
+					"sid": 602735312359732
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 301642353505795
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Curseur",
+							"sid": 625114257481645,
+							"parameters": {
+								"x": "Souris.X",
+								"y": "Souris.Y"
+							}
+						}
+					],
+					"sid": 176728288739005
+				}
+			],
+			"sid": 642762861205044
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Background",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 237645988079081
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Background",
+							"sid": 900177122852369,
+							"parameters": {
+								"y": "Background.Y+1"
+							}
+						}
+					],
+					"sid": 206197795909436
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 697535051514167
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Background2",
+							"sid": 825477315954990,
+							"parameters": {
+								"y": "Background2.Y+1"
+							}
+						}
+					],
+					"sid": 995924947454200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Background",
+							"sid": 860578425328128,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "480"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Background",
+							"sid": 625785567352496,
+							"parameters": {
+								"y": "Background2.Y - Background.Height"
+							}
+						}
+					],
+					"sid": 255769086947815
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Background2",
+							"sid": 191340524855366,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "480"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Background2",
+							"sid": 107126963387388,
+							"parameters": {
+								"y": "Background.Y - Background2.Height"
+							}
+						}
+					],
+					"sid": 772748840253976
+				}
+			],
+			"sid": 697738777014418
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -122,6 +277,14 @@
 					"parameters": {
 						"state": "disabled"
 					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Curseur",
+					"sid": 143236792540156,
+					"parameters": {
+						"frame-number": "2"
+					}
 				}
 			],
 			"sid": 376769234317832
@@ -136,7 +299,16 @@
 					"behaviorType": "DragDrop"
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Curseur",
+					"sid": 749662157460349,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
 			"sid": 219347709570717,
 			"children": [
 				{
@@ -466,98 +638,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 933633731765968
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "Tuilage",
-					"sid": 642210758768985,
-					"parameters": {
-						"y": "Tuilage.Y+1"
-					}
-				}
-			],
-			"sid": 789049991037350
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 317026628808685
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "Tuilage2",
-					"sid": 941524473971587,
-					"parameters": {
-						"y": "Tuilage2.Y+1"
-					}
-				}
-			],
-			"sid": 566340476651969
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-y",
-					"objectClass": "Tuilage",
-					"sid": 665067348032342,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "480"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "Tuilage",
-					"sid": 187310752480622,
-					"parameters": {
-						"y": "Tuilage2.Y - Tuilage.Height"
-					}
-				}
-			],
-			"sid": 560928117372128
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-y",
-					"objectClass": "Tuilage2",
-					"sid": 340149256953142,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "480"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-y",
-					"objectClass": "Tuilage2",
-					"sid": 207357033805210,
-					"parameters": {
-						"y": "Tuilage.Y - Tuilage2.Height"
-					}
-				}
-			],
-			"sid": 954165706530874
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
 					"sid": 389794409590368,
@@ -578,6 +658,124 @@
 				}
 			],
 			"sid": 861168108884858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Souris",
+					"sid": 251230990626923,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Souris",
+					"sid": 698038964787891,
+					"parameters": {
+						"object": "Baseball"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Baseball",
+					"sid": 294715907703069,
+					"parameters": {
+						"instance-variable": "Used"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Baseball",
+					"sid": 890068089578923,
+					"parameters": {
+						"instance-variable": "Active",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 478538396574294
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Baseball",
+					"sid": 804815909467237,
+					"parameters": {
+						"instance-variable": "Active"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Curseur",
+					"sid": 616872587904832,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 474468161142112,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Souris",
+							"sid": 808303417674522,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Peon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Peon",
+							"sid": 711701285478414
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Baseball",
+							"sid": 853363503032876,
+							"parameters": {
+								"instance-variable": "Used",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Baseball",
+							"sid": 639782221032021,
+							"parameters": {
+								"instance-variable": "Active",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Curseur",
+							"sid": 970718703770543,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 760199437614588
+				}
+			]
 		}
 	],
 	"sid": 840031859771763

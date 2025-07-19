@@ -1,67 +1,11 @@
 {
-	"name": "Scène 2",
+	"name": "Menu",
 	"layers": [
 		{
 			"name": "Calque 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "Tuilage3",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 13,
-					"sid": 652341732496802,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"ownData": {
-						"tilemapData": {
-							"width": 27,
-							"height": 15,
-							"max-width": 56,
-							"max-height": 30,
-							"data": "15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,15x0,15x45,2x0,45,12x0,15x45,63x0,65,821x0"
-						},
-						"tile-width": 32,
-						"tile-height": 32,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"instanceFolderItem": {
-						"sid": 652341732496802,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 864,
-						"height": 480,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Startbutton",
 					"properties": {
@@ -135,6 +79,96 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Curseur",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"sid": 834251490655880,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 834251490655880,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 640,
+						"y": 288,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Texte",
+					"properties": {
+						"text": "TrainWreck",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 39,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 13,
+					"sid": 717413168274716,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 717413168274716,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 256,
+						"y": 96,
+						"width": 350,
+						"height": 70,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 452470642789913,
@@ -180,5 +214,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Feuille d'Evènements 2"
+	"eventSheet": "Feuille d'Evènements Menu"
 }

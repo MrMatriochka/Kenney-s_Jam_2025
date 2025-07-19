@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Texte",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Tilemap",
 			"name": "Tuilage",
 			"author": "Scirra",
@@ -62,13 +69,15 @@
 			"Wagon",
 			"Peon",
 			"TaskZone",
-			"Tuilage",
-			"Tuilage2",
+			"Background",
+			"Background2",
 			"Souris",
-			"Tuilage3",
 			"Startbutton",
 			"QuitButton",
-			"Navigateur"
+			"Navigateur",
+			"Curseur",
+			"Texte",
+			"Baseball"
 		],
 		"subfolders": []
 	},
@@ -81,15 +90,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Scène 1",
-			"Scène 2"
+			"Menu",
+			"Scène 1"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Feuille d'Evènements 1",
-			"Feuille d'Evènements 2"
+			"Feuille d'Evènements Menu",
+			"Feuille d'Evènements 1"
 		],
 		"subfolders": []
 	},
@@ -252,5 +261,5 @@
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "Menu"
 }

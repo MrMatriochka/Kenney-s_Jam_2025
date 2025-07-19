@@ -1,0 +1,189 @@
+{
+	"name": "Feuille d'Evènements Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Souris",
+					"sid": 126800967716468,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Souris",
+					"sid": 100756372611146,
+					"parameters": {
+						"object": "Startbutton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 174798426779597,
+					"parameters": {
+						"layout": "Scène 1"
+					}
+				}
+			],
+			"sid": 624649461818702
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Souris",
+					"sid": 901665186646543,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Souris",
+					"sid": 948091793058845,
+					"parameters": {
+						"object": "QuitButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Navigateur",
+					"sid": 347758600382135
+				}
+			],
+			"sid": 973232071850857
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Curseur",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 237243653552620
+						}
+					],
+					"actions": [
+						{
+							"id": "set-cursor-style2",
+							"objectClass": "Souris",
+							"sid": 931650634076113,
+							"parameters": {
+								"cursor-style": "none"
+							}
+						}
+					],
+					"sid": 741835547860982
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 469154552132731
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Curseur",
+							"sid": 498675996409000,
+							"parameters": {
+								"x": "Souris.X",
+								"y": "Souris.Y"
+							}
+						}
+					],
+					"sid": 291407894392970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 813413374921653,
+							"parameters": {
+								"object": "Startbutton"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 183085066653874,
+							"parameters": {
+								"object": "QuitButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Curseur",
+							"sid": 215820695318037,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 359500665458368,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 319770870681164,
+							"parameters": {
+								"object": "Startbutton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 150022262510550,
+							"parameters": {
+								"object": "QuitButton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Curseur",
+							"sid": 884394964094339,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 454666555229723
+				}
+			],
+			"sid": 565308012839909
+		}
+	],
+	"sid": 668005922385668
+}
