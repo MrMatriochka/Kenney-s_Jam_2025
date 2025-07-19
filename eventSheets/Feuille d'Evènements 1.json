@@ -776,6 +776,27 @@
 					"sid": 760199437614588
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 620665581642591
+				}
+			],
+			"actions": [
+				{
+					"id": "set-progress",
+					"objectClass": "BarreDeProgression",
+					"sid": 617766489602256,
+					"parameters": {
+						"value": "Power"
+					}
+				}
+			],
+			"sid": 517118790923944
 		}
 	],
 	"sid": 840031859771763

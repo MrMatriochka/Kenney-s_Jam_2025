@@ -42,6 +42,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Barre de progression",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Projectile",
@@ -77,7 +84,8 @@
 			"Navigateur",
 			"Curseur",
 			"Texte",
-			"Baseball"
+			"Baseball",
+			"BarreDeProgression"
 		],
 		"subfolders": []
 	},
