@@ -1,0 +1,109 @@
+{
+	"name": "Peon",
+	"plugin-id": "Sprite",
+	"sid": 288661911350145,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Wandering",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 428576142616756
+		},
+		{
+			"name": "Anger",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 752358161671565
+		},
+		{
+			"name": "Working",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 131996593412756
+		},
+		{
+			"name": "RandomLeave",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 248306613437705
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 451250468325333
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 655655224155155
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 240508871642545
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1583633,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.125,
+								0.75,
+								0.125,
+								0.9375,
+								0.3125,
+								1,
+								0.4375,
+								1,
+								0.9375,
+								0.9375,
+								1,
+								0.0625,
+								1,
+								0,
+								0.9375,
+								0,
+								0.4375,
+								0.0625,
+								0.3125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 162348094113972,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
