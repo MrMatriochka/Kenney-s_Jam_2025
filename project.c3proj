@@ -8,15 +8,22 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Browser",
+			"name": "Navigateur",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Arrière-plan Répété",
+			"id": "Mouse",
+			"name": "Souris",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -56,8 +63,12 @@
 			"Peon",
 			"TaskZone",
 			"Tuilage",
-			"ArrièreplanRépété",
-			"Tuilage2"
+			"Tuilage2",
+			"Souris",
+			"Tuilage3",
+			"Startbutton",
+			"QuitButton",
+			"Navigateur"
 		],
 		"subfolders": []
 	},
