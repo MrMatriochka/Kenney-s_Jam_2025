@@ -15,29 +15,36 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Arrière-plan Répété",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Tilemap",
+			"name": "Tuilage",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Bullet",
+			"name": "Projectile",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Glisser déposer",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Solide",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -47,7 +54,10 @@
 		"items": [
 			"Wagon",
 			"Peon",
-			"TaskZone"
+			"TaskZone",
+			"Tuilage",
+			"ArrièreplanRépété",
+			"Tuilage2"
 		],
 		"subfolders": []
 	},
@@ -60,13 +70,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Scène 1"
+			"Scène 1",
+			"Scène 2"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Feuille d'Evènements 1"
+			"Feuille d'Evènements 1",
+			"Feuille d'Evènements 2"
 		],
 		"subfolders": []
 	},
