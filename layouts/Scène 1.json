@@ -117,6 +117,114 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Particules2",
+					"properties": {
+						"rate": 43,
+						"spray-cone": 30,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": false,
+						"live-preview": false,
+						"speed": 200,
+						"size": 17,
+						"opacity": 70,
+						"grow-rate": 0,
+						"x-randomiser": 10,
+						"y-randomiser": 10,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": -20,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 55,
+					"sid": 510115627531547,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 510115627531547,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 439.7861124674473,
+						"y": 426.3950398763028,
+						"width": 95.83333333333337,
+						"height": 105.83333333333331,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							0.4392156862745098,
+							0.4392156862745098,
+							0.4392156862745098,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Particules2",
+					"properties": {
+						"rate": 43,
+						"spray-cone": 30,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": false,
+						"live-preview": false,
+						"speed": 200,
+						"size": 17,
+						"opacity": 70,
+						"grow-rate": 0,
+						"x-randomiser": 10,
+						"y-randomiser": 10,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": -20,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 56,
+					"sid": 522068283478771,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 522068283478771,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 390.4419417680807,
+						"y": 425.88244806843784,
+						"width": 95.83333333333337,
+						"height": 105.83333333333331,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							0.4392156862745098,
+							0.4392156862745098,
+							0.4392156862745098,
+							1
+						],
+						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 172615539589298,
@@ -176,6 +284,11 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"DéfilerVers": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -239,6 +352,11 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"DéfilerVers": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -1559,7 +1677,7 @@
 					"type": "Peon",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Walk",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1640,7 +1758,7 @@
 					"type": "Peon",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Walk",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1721,7 +1839,7 @@
 					"type": "Peon",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Walk",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1802,7 +1920,7 @@
 					"type": "Peon",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Walk",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false

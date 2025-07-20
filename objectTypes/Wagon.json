@@ -10,6 +10,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 294337035511799
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "DéfilerVers",
+			"sid": 661141325873820
 		}
 	],
 	"effectTypes": [],

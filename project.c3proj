@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Défiler vers",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solide",
 			"author": "Scirra",
@@ -115,7 +122,8 @@
 			"Background3",
 			"Spawn",
 			"Destroy",
-			"Particules"
+			"Particules",
+			"Particules2"
 		],
 		"subfolders": []
 	},

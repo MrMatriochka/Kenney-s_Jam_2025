@@ -133,6 +133,14 @@
 							"parameters": {
 								"y": "CharbonCollectible.Y+1"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Particules2",
+							"sid": 904564132398249,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
 					"sid": 206197795909436
@@ -191,13 +199,25 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 812378499395787
+							"sid": 585210360066347,
+							"parameters": {
+								"variable": "TrainStop"
+							}
 						}
 					],
-					"actions": [],
-					"sid": 271025432175628
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Particules2",
+							"sid": 710120516926414,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 438577699426378
 				}
 			],
 			"sid": 697738777014418
@@ -369,11 +389,12 @@
 							}
 						},
 						{
-							"id": "set-animation-frame",
+							"id": "set-animation",
 							"objectClass": "Peon",
-							"sid": 618393559905540,
+							"sid": 782946807049455,
 							"parameters": {
-								"frame-number": "0"
+								"animation": "\"Walk\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -1076,11 +1097,12 @@
 							}
 						},
 						{
-							"id": "set-animation-frame",
+							"id": "set-animation",
 							"objectClass": "Peon",
-							"sid": 124529081677319,
+							"sid": 243042203566129,
 							"parameters": {
-								"frame-number": "1"
+								"animation": "\"Sleep\"",
+								"from": "beginning"
 							}
 						}
 					],
