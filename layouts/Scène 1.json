@@ -446,7 +446,7 @@
 				{
 					"type": "TaskZone",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -467,8 +467,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 418,
-						"y": 410,
+						"x": 392.7392784719752,
+						"y": 408.8038284264042,
 						"width": 38.94884229219298,
 						"height": 38.26582883682789,
 						"originX": 0.504,
@@ -486,7 +486,7 @@
 				{
 					"type": "TaskZone",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -507,8 +507,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 415.01919267809575,
-						"y": 218.32408988457078,
+						"x": 409.374453377558,
+						"y": 216.63066809440946,
 						"width": 38.94884229219298,
 						"height": 38.26582883682789,
 						"originX": 0.504,
@@ -526,87 +526,7 @@
 				{
 					"type": "TaskZone",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 21,
-					"sid": 677786748665278,
-					"tags": "",
-					"instanceVariables": {
-						"Working": false,
-						"Task": "AddCoal"
-					},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 677786748665278,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 458.23403838533955,
-						"y": 317.5333089579015,
-						"width": 38.94884229219298,
-						"height": 38.26582883682789,
-						"originX": 0.504,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TaskZone",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 22,
-					"sid": 614303788638495,
-					"tags": "",
-					"instanceVariables": {
-						"Working": false,
-						"Task": "AddCoal"
-					},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 614303788638495,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 377.6385215903622,
-						"y": 317.5333376328774,
-						"width": 38.94884229219298,
-						"height": 38.26582883682789,
-						"originX": 0.504,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TaskZone",
-					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -627,8 +547,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 412.4721725752555,
-						"y": 94.8711998418872,
+						"x": 409.64980292498666,
+						"y": 88.09751268124188,
 						"width": 38.94884229219298,
 						"height": 38.26582883682789,
 						"originX": 0.504,
@@ -664,8 +584,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 416,
-						"y": 160,
+						"x": 417.12894786010753,
+						"y": 155.4559848630671,
 						"width": 125.69155112355712,
 						"height": 170.77043917765178,
 						"originX": 0.5,
@@ -701,8 +621,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 416,
-						"y": 352,
+						"x": 416.6794213485373,
+						"y": 347.0490504753102,
 						"width": 125.69155112355712,
 						"height": 170.77043917765178,
 						"originX": 0.5,
@@ -1720,6 +1640,102 @@
 					}
 				},
 				{
+					"type": "TaskZone",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 519741186780071,
+					"tags": "",
+					"instanceVariables": {
+						"Working": false,
+						"Task": "Chill"
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 519741186780071,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 441.8413039872445,
+						"y": 408.37036891356456,
+						"width": 38.94884229219298,
+						"height": 38.26582883682789,
+						"originX": 0.504,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Deco",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 22,
+					"sid": 466342289585178,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 120,
+							"height": 67,
+							"max-width": 120,
+							"max-height": 67,
+							"data": "1559x0,6,4x0,6,45,57,69,44x0,45,57,69,5x0,45,57,69,6x0,6,2x0,46,129,46,44x0,46,89,46,5x0,46,103,46,9x0,47,59,71,44x0,47,59,71,5x0,47,59,71,7x0,6,0,45,57,69,63x0,108,46,129,46,62x0,116,6,47,59,71,6137x0"
+						},
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"instanceFolderItem": {
+						"sid": 466342289585178,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 2.5048936272881974,
+						"y": 0.24748152342033336,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Peon",
 					"properties": {
 						"initially-visible": true,
@@ -2158,7 +2174,7 @@
 					"type": "Charbon",
 					"properties": {
 						"value": 0,
-						"maximum": 100,
+						"maximum": 20,
 						"tooltip": "",
 						"initially-visible": true,
 						"id": "",

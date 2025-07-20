@@ -9,14 +9,14 @@
 		{
 			"type": "plugin",
 			"id": "Browser",
-			"name": "Navigateur",
+			"name": "Browser",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "Souris",
+			"name": "Mouse",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,7 +30,7 @@
 		{
 			"type": "plugin",
 			"id": "Particles",
-			"name": "Particules",
+			"name": "Particles",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -44,56 +44,56 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texte",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Tuilage",
+			"name": "Tilemap",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "progressbar",
-			"name": "Barre de progression",
+			"name": "Progress bar",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projectile",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Glisser déposer",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pathfinding",
-			"name": "ChercheChemin",
+			"name": "Pathfinding",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Sin",
-			"name": "Sinus",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solide",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -123,7 +123,8 @@
 			"Spawn",
 			"Destroy",
 			"Particules",
-			"Particules2"
+			"Particules2",
+			"Deco"
 		],
 		"subfolders": []
 	},
