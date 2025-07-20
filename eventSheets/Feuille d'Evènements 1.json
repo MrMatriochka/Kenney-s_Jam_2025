@@ -13,16 +13,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "addMultiplier",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 191708154470651
-		},
-		{
-			"eventType": "variable",
 			"name": "TrainStop",
 			"type": "boolean",
 			"initialValue": "false",
@@ -135,6 +125,14 @@
 							"parameters": {
 								"y": "Background2.Y+1"
 							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "CharbonCollectible",
+							"sid": 230740671856305,
+							"parameters": {
+								"y": "CharbonCollectible.Y+1"
+							}
 						}
 					],
 					"sid": 206197795909436
@@ -188,6 +186,18 @@
 						}
 					],
 					"sid": 772748840253976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 812378499395787
+						}
+					],
+					"actions": [],
+					"sid": 271025432175628
 				}
 			],
 			"sid": 697738777014418
@@ -253,19 +263,22 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
+									"id": "every-x-seconds",
 									"objectClass": "System",
-									"sid": 968975709557604
+									"sid": 418705234555958,
+									"parameters": {
+										"interval-seconds": "0.5"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "add-to-instvar",
 									"objectClass": "Peon",
-									"sid": 621876468661600,
+									"sid": 458909684183254,
 									"parameters": {
 										"instance-variable": "Anger",
-										"value": "-0.05"
+										"value": "-1"
 									}
 								}
 							],
@@ -353,6 +366,14 @@
 							"sid": 397195899656826,
 							"parameters": {
 								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Peon",
+							"sid": 618393559905540,
+							"parameters": {
+								"frame-number": "0"
 							}
 						}
 					],
@@ -692,39 +713,22 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 424021668796676,
-							"parameters": {
-								"variable": "addMultiplier",
-								"value": "1"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 556716963287919,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
+									"id": "every-x-seconds",
 									"objectClass": "System",
-									"sid": 657604356294847
-								}
-							],
-							"actions": [
-								{
-									"id": "add-to-instvar",
-									"objectClass": "Peon",
-									"sid": 585471565330787,
+									"sid": 974432280339447,
 									"parameters": {
-										"instance-variable": "Anger",
-										"value": "0.1"
+										"interval-seconds": "1.0"
 									}
 								}
 							],
+							"actions": [],
 							"sid": 415672159592194,
 							"children": [
 								{
@@ -944,6 +948,217 @@
 				}
 			],
 			"sid": 322600451090615
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tasks",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 213753320001498,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"AddCoal\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 603855957971134,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 138832263654058,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 972132088719517,
+							"parameters": {
+								"variable": "charbon",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 197606368059374,
+							"parameters": {
+								"variable": "charbon",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 958569171615698,
+							"parameters": {
+								"variable": "power",
+								"value": "2"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Peon",
+							"sid": 872482330063309,
+							"parameters": {
+								"instance-variable": "Anger",
+								"value": "random(1,5)"
+							}
+						}
+					],
+					"sid": 965764341892576
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 481066439834196,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Chill\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 252016059040402,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 657363471086515,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "TaskZone",
+							"sid": 111914083593009,
+							"parameters": {
+								"object": "Peon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Peon",
+							"sid": 964383612046326,
+							"parameters": {
+								"instance-variable": "Anger",
+								"value": "5"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Peon",
+							"sid": 124529081677319,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 297919383893804
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 405100834346991,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Stop\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 841499125232575,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 491865168784991,
+							"parameters": {
+								"variable": "TrainStop",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 728831376139266
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 283100910094836,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Stop\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 186342596369302,
+							"parameters": {
+								"instance-variable": "Working"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 929649664111958,
+							"parameters": {
+								"variable": "TrainStop",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 327303824560781
+				}
+			],
+			"sid": 451529814243070
 		},
 		{
 			"eventType": "block",
@@ -1179,198 +1394,161 @@
 			"sid": 563601352030279
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Tasks",
-			"description": "",
-			"isActiveOnStart": true,
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 225647956416274,
+					"parameters": {
+						"interval-seconds": "random(5,15)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Spawn",
+					"sid": 622890610989402,
+					"parameters": {
+						"instance-variable": "randomSpawn",
+						"value": "random(0,1)"
+					}
+				}
+			],
+			"sid": 905087047161670,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "TaskZone",
-							"sid": 462587915034684,
+							"objectClass": "Spawn",
+							"sid": 162272322936390,
 							"parameters": {
-								"instance-variable": "Task",
+								"instance-variable": "Type",
 								"comparison": 0,
-								"value": "\"AddCoal\""
+								"value": "\"type2\""
 							}
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "TaskZone",
-							"sid": 728526340347402,
+							"id": "compare-instance-variable",
+							"objectClass": "Spawn",
+							"sid": 379089213318260,
 							"parameters": {
-								"instance-variable": "Working"
-							}
-						},
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 840956257574145,
-							"parameters": {
-								"interval-seconds": "1.0"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 178106543106918,
-							"parameters": {
-								"variable": "charbon",
-								"comparison": 4,
-								"value": "0"
+								"instance-variable": "randomSpawn",
+								"comparison": 3,
+								"value": "0.33"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 879075097464985,
+							"id": "spawn-another-object",
+							"objectClass": "Spawn",
+							"sid": 221966611935652,
 							"parameters": {
-								"variable": "charbon",
-								"value": "1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 691336502335889,
-							"parameters": {
-								"variable": "power",
-								"value": "2"
+								"object": "CharbonCollectible",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
-					"sid": 847347724251266
+					"sid": 660239736425447
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "TaskZone",
-							"sid": 327459055437469,
+							"objectClass": "Spawn",
+							"sid": 387132220765646,
 							"parameters": {
-								"instance-variable": "Task",
+								"instance-variable": "Type",
 								"comparison": 0,
-								"value": "\"Chill\""
+								"value": "\"type3\""
 							}
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "TaskZone",
-							"sid": 623260111126281,
+							"id": "compare-instance-variable",
+							"objectClass": "Spawn",
+							"sid": 299295976720663,
 							"parameters": {
-								"instance-variable": "Working"
-							}
-						},
-						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 416053012185350,
-							"parameters": {
-								"interval-seconds": "1.0"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "TaskZone",
-							"sid": 236041922078698,
-							"parameters": {
-								"object": "Peon"
+								"instance-variable": "randomSpawn",
+								"comparison": 5,
+								"value": "0.66"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Peon",
-							"sid": 974698674165580,
+							"id": "spawn-another-object",
+							"objectClass": "Spawn",
+							"sid": 764170362437686,
 							"parameters": {
-								"instance-variable": "Anger",
-								"value": "5"
+								"object": "CharbonCollectible",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
-					"sid": 450717218234799
+					"sid": 726232241610478
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "TaskZone",
-							"sid": 515143059108523,
+							"objectClass": "Spawn",
+							"sid": 812976434618956,
 							"parameters": {
-								"instance-variable": "Task",
+								"instance-variable": "Type",
 								"comparison": 0,
-								"value": "\"Stop\""
+								"value": "\"type1\""
 							}
 						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "TaskZone",
-							"sid": 365441569834053,
-							"parameters": {
-								"instance-variable": "Working"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 818013370634015,
-							"parameters": {
-								"variable": "TrainStop",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 617802051392551
-				},
-				{
-					"eventType": "block",
-					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "TaskZone",
-							"sid": 913214931326161,
+							"objectClass": "Spawn",
+							"sid": 876161476501178,
 							"parameters": {
-								"instance-variable": "Task",
-								"comparison": 0,
-								"value": "\"Stop\""
+								"instance-variable": "randomSpawn",
+								"comparison": 5,
+								"value": "0.34"
 							}
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "TaskZone",
-							"sid": 394891097763809,
+							"id": "compare-instance-variable",
+							"objectClass": "Spawn",
+							"sid": 913846292468361,
 							"parameters": {
-								"instance-variable": "Working"
-							},
-							"isInverted": true
+								"instance-variable": "randomSpawn",
+								"comparison": 3,
+								"value": "0.65"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 529793252602060,
+							"id": "spawn-another-object",
+							"objectClass": "Spawn",
+							"sid": 749571976507041,
 							"parameters": {
-								"variable": "TrainStop",
-								"value": "false"
+								"object": "CharbonCollectible",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
-					"sid": 188670579923038
+					"sid": 159537027086771
 				}
-			],
-			"sid": 444808710946465
+			]
 		}
 	],
 	"sid": 840031859771763

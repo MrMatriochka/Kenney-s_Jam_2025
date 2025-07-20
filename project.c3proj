@@ -9,14 +9,14 @@
 		{
 			"type": "plugin",
 			"id": "Browser",
-			"name": "Browser",
+			"name": "Navigateur",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "Mouse",
+			"name": "Souris",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -24,6 +24,13 @@
 			"type": "plugin",
 			"id": "NinePatch",
 			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particules",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -37,49 +44,49 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texte",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Tilemap",
-			"name": "Tilemap",
+			"name": "Tuilage",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "progressbar",
-			"name": "Progress bar",
+			"name": "Barre de progression",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Bullet",
+			"name": "Projectile",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Glisser déposer",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Pathfinding",
-			"name": "Pathfinding",
+			"name": "ChercheChemin",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Solide",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -104,7 +111,11 @@
 			"Texte2",
 			"Charbon",
 			"WagonHitBox",
-			"CharbonCollectible"
+			"CharbonCollectible",
+			"Background3",
+			"Spawn",
+			"Destroy",
+			"Particules"
 		],
 		"subfolders": []
 	},
