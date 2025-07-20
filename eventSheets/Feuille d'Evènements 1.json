@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "charbon",
 			"type": "number",
-			"initialValue": "100",
+			"initialValue": "20",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -727,10 +727,10 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 269262929953435,
+											"sid": 425325161925146,
 											"parameters": {
 												"variable": "charbon",
-												"value": "10"
+												"value": "2"
 											}
 										}
 									],
@@ -1048,10 +1048,10 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 958569171615698,
+							"sid": 961260356271340,
 							"parameters": {
 								"variable": "power",
-								"value": "2"
+								"value": "10"
 							}
 						},
 						{
@@ -1216,10 +1216,10 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 228057740459407,
+					"sid": 329957315234068,
 					"parameters": {
 						"variable": "power",
-						"value": "1"
+						"value": "5"
 					}
 				}
 			],
@@ -1432,6 +1432,33 @@
 				}
 			],
 			"sid": 563601352030279
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 227400018550744,
+					"parameters": {
+						"variable": "charbon",
+						"comparison": 5,
+						"value": "20"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 477667234712610,
+					"parameters": {
+						"variable": "charbon",
+						"value": "20"
+					}
+				}
+			],
+			"sid": 162187492184568
 		},
 		{
 			"eventType": "block",
