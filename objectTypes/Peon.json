@@ -49,6 +49,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 240508871642545
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 887950712548501
 		}
 	],
 	"effectTypes": [],

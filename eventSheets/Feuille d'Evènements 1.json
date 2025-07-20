@@ -23,9 +23,19 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "TrainStop",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 823153974545588
+		},
+		{
+			"eventType": "variable",
 			"name": "charbon",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "100",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -98,6 +108,15 @@
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 237645988079081
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 579419565689457,
+							"parameters": {
+								"variable": "TrainStop"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -108,30 +127,17 @@
 							"parameters": {
 								"y": "Background.Y+1"
 							}
-						}
-					],
-					"sid": 206197795909436
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 697535051514167
-						}
-					],
-					"actions": [
+						},
 						{
 							"id": "set-y",
 							"objectClass": "Background2",
-							"sid": 825477315954990,
+							"sid": 569994266272519,
 							"parameters": {
 								"y": "Background2.Y+1"
 							}
 						}
 					],
-					"sid": 995924947454200
+					"sid": 206197795909436
 				},
 				{
 					"eventType": "block",
@@ -305,6 +311,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Peon",
+							"sid": 984690749540832,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"set": "disabled"
+							}
+						},
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Peon",
@@ -555,6 +570,113 @@
 								}
 							],
 							"sid": 742892296197308
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 286678361012819,
+									"parameters": {
+										"object": "WagonHitBox"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 115080700261617,
+									"parameters": {
+										"variable": "TrainStop"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Peon",
+									"sid": 434166836891427
+								}
+							],
+							"sid": 213609764957122
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 654658332876095,
+									"parameters": {
+										"object": "WagonHitBox"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 209688004665564,
+									"parameters": {
+										"variable": "TrainStop"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Peon",
+									"sid": 441935060399036,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"set": "enabled"
+									}
+								},
+								{
+									"id": "find-path",
+									"objectClass": "Peon",
+									"sid": 884046072279203,
+									"behaviorType": "Pathfinding",
+									"parameters": {
+										"x": "Wagon.X",
+										"y": "Wagon.Y"
+									}
+								}
+							],
+							"sid": 274472754275533,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Peon",
+											"sid": 258973351580546,
+											"parameters": {
+												"object": "CharbonCollectible"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "CharbonCollectible",
+											"sid": 292305548622336
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 269262929953435,
+											"parameters": {
+												"variable": "charbon",
+												"value": "10"
+											}
+										}
+									],
+									"sid": 966909563391256
+								}
+							]
 						}
 					]
 				},
@@ -600,15 +722,6 @@
 									"parameters": {
 										"instance-variable": "Anger",
 										"value": "0.1"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 786063449909325,
-									"parameters": {
-										"variable": "power",
-										"value": "1*addMultiplier"
 									}
 								}
 							],
@@ -987,10 +1100,18 @@
 			"actions": [
 				{
 					"id": "set-progress",
-					"objectClass": "BarreDeProgression",
+					"objectClass": "Power",
 					"sid": 499750929396622,
 					"parameters": {
 						"value": "power"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "Charbon",
+					"sid": 639356243837898,
+					"parameters": {
+						"value": "charbon"
 					}
 				},
 				{
@@ -1032,6 +1153,32 @@
 			"sid": 591972577131387
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 478597177327325,
+					"parameters": {
+						"variable": "power",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 570118799391938,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 563601352030279
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Tasks",
@@ -1042,17 +1189,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 840956257574145,
-							"parameters": {
-								"interval-seconds": "1.0"
-							}
-						},
-						{
 							"id": "compare-instance-variable",
 							"objectClass": "TaskZone",
-							"sid": 300259706120648,
+							"sid": 462587915034684,
 							"parameters": {
 								"instance-variable": "Task",
 								"comparison": 0,
@@ -1062,9 +1201,27 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "TaskZone",
-							"sid": 595176953943220,
+							"sid": 728526340347402,
 							"parameters": {
 								"instance-variable": "Working"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 840956257574145,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 178106543106918,
+							"parameters": {
+								"variable": "charbon",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
@@ -1089,6 +1246,128 @@
 						}
 					],
 					"sid": 847347724251266
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 327459055437469,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Chill\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 623260111126281,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 416053012185350,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "TaskZone",
+							"sid": 236041922078698,
+							"parameters": {
+								"object": "Peon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Peon",
+							"sid": 974698674165580,
+							"parameters": {
+								"instance-variable": "Anger",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 450717218234799
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 515143059108523,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Stop\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 365441569834053,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 818013370634015,
+							"parameters": {
+								"variable": "TrainStop",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 617802051392551
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 913214931326161,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"Stop\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 394891097763809,
+							"parameters": {
+								"instance-variable": "Working"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 529793252602060,
+							"parameters": {
+								"variable": "TrainStop",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 188670579923038
 				}
 			],
 			"sid": 444808710946465

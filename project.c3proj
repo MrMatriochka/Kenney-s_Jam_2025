@@ -71,6 +71,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -90,11 +97,14 @@
 			"Curseur",
 			"Texte",
 			"Baseball",
-			"BarreDeProgression",
+			"Power",
 			"TempBut",
 			"ButStart",
 			"ButQuit",
-			"Texte2"
+			"Texte2",
+			"Charbon",
+			"WagonHitBox",
+			"CharbonCollectible"
 		],
 		"subfolders": []
 	},
