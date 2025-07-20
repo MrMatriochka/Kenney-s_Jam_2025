@@ -286,9 +286,32 @@
 								"tags": ""
 							}
 						},
-						"DéfilerVers": {
+						"Sinus": {
 							"properties": {
-								"enabled": true
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.1,
+								"period-random": 0.5,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0.5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Sinus2": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 0.1,
+								"period-random": 0.5,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0.5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -296,9 +319,9 @@
 						"tilemapData": {
 							"width": 8,
 							"height": 11,
-							"max-width": 149,
+							"max-width": 185,
 							"max-height": 98,
-							"data": "97,9x109,121,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,99,9x111,123,676x0,49,6x61,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,51,6x63,12732x0"
+							"data": "97,9x109,121,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,98,9x110,122,87x0,99,9x111,123,676x0,49,6x61,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,50,6x62,91x0,51,6x63,16260x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -354,9 +377,32 @@
 								"tags": ""
 							}
 						},
-						"DéfilerVers": {
+						"Sinus": {
 							"properties": {
-								"enabled": true
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 0.1,
+								"period-random": 0.5,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0.5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Sinus2": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 0.1,
+								"period-random": 0.5,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 0.5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -364,9 +410,9 @@
 						"tilemapData": {
 							"width": 8,
 							"height": 11,
-							"max-width": 165,
+							"max-width": 201,
 							"max-height": 103,
-							"data": "97,9x109,121,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,99,9x111,123,16263x0"
+							"data": "97,9x109,121,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,98,9x110,122,92x0,99,9x111,123,19971x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,

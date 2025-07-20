@@ -85,8 +85,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "scrollto",
-			"name": "Défiler vers",
+			"id": "Sin",
+			"name": "Sinus",
 			"author": "Scirra",
 			"bundled": false
 		},

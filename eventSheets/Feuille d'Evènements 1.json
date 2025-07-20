@@ -141,6 +141,15 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Wagon",
+							"sid": 773991639718576,
+							"behaviorType": "Sinus",
+							"parameters": {
+								"state": "active"
+							}
 						}
 					],
 					"sid": 206197795909436
@@ -214,6 +223,15 @@
 							"sid": 710120516926414,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Wagon",
+							"sid": 983182500574492,
+							"behaviorType": "Sinus",
+							"parameters": {
+								"state": "inactive"
 							}
 						}
 					],

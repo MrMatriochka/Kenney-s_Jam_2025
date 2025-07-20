@@ -12,9 +12,14 @@
 			"sid": 294337035511799
 		},
 		{
-			"behaviorId": "scrollto",
-			"name": "DéfilerVers",
-			"sid": 661141325873820
+			"behaviorId": "Sin",
+			"name": "Sinus",
+			"sid": 637610365751025
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sinus2",
+			"sid": 841212959362313
 		}
 	],
 	"effectTypes": [],
