@@ -291,7 +291,10 @@
 					"uid": 8,
 					"sid": 364426570262327,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Working": false,
+						"Task": ""
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 364426570262327,
@@ -328,7 +331,10 @@
 					"uid": 9,
 					"sid": 210779670864626,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Working": false,
+						"Task": ""
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 210779670864626,
@@ -337,8 +343,128 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 456,
-						"y": 163,
+						"x": 415.01919267809575,
+						"y": 218.32408988457078,
+						"width": 38.94884229219298,
+						"height": 38.26582883682789,
+						"originX": 0.504,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TaskZone",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"sid": 677786748665278,
+					"tags": "",
+					"instanceVariables": {
+						"Working": false,
+						"Task": ""
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 677786748665278,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 458.23403838533955,
+						"y": 317.5333089579015,
+						"width": 38.94884229219298,
+						"height": 38.26582883682789,
+						"originX": 0.504,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TaskZone",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"sid": 614303788638495,
+					"tags": "",
+					"instanceVariables": {
+						"Working": false,
+						"Task": ""
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 614303788638495,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 377.6385215903622,
+						"y": 317.5333376328774,
+						"width": 38.94884229219298,
+						"height": 38.26582883682789,
+						"originX": 0.504,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TaskZone",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 25,
+					"sid": 923764917207959,
+					"tags": "",
+					"instanceVariables": {
+						"Working": false,
+						"Task": ""
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 923764917207959,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 412.4721725752555,
+						"y": 94.8711998418872,
 						"width": 38.94884229219298,
 						"height": 38.26582883682789,
 						"originX": 0.504,
@@ -714,8 +840,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 544,
-						"y": 192,
+						"x": 647.8180452154908,
+						"y": 11.68444778362118,
 						"width": 200,
 						"height": 25,
 						"originX": 0,

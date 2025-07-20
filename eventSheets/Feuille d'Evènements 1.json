@@ -187,339 +187,432 @@
 			"sid": 697738777014418
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Peon",
-					"sid": 511983415989501,
-					"parameters": {
-						"instance-variable": "Wandering"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-enabled",
-					"objectClass": "Peon",
-					"sid": 945323563715103,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"state": "enabled"
-					}
-				}
-			],
-			"sid": 208170975534208,
+			"eventType": "group",
+			"disabled": false,
+			"title": "Peon",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-x-seconds",
-							"objectClass": "System",
-							"sid": 462062233368709,
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Peon",
+							"sid": 101592618171641,
 							"parameters": {
-								"interval-seconds": "2"
+								"instance-variable": "Wandering"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-angle-of-motion",
+							"id": "set-enabled",
 							"objectClass": "Peon",
-							"sid": 290515304514913,
+							"sid": 973414846921888,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"angle": "random(360)"
+								"state": "enabled"
 							}
 						}
 					],
-					"sid": 962029280682558
+					"sid": 940787953720100,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 609742077402821,
+									"parameters": {
+										"interval-seconds": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Peon",
+									"sid": 366949882642890,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "random(360)"
+									}
+								}
+							],
+							"sid": 667733641390456
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 968975709557604
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Peon",
+									"sid": 621876468661600,
+									"parameters": {
+										"instance-variable": "Anger",
+										"value": "-0.05"
+									}
+								}
+							],
+							"sid": 110384435675675
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Peon",
+									"sid": 185887106482090,
+									"parameters": {
+										"instance-variable": "Anger",
+										"comparison": 3,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Peon",
+									"sid": 642836126026491,
+									"parameters": {
+										"instance-variable": "Anger",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 442090316309939
+						}
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 384641686614154
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-instvar",
+							"id": "on-drag-start",
 							"objectClass": "Peon",
-							"sid": 797677823214463,
-							"parameters": {
-								"instance-variable": "Anger",
-								"value": "-0.05"
-							}
-						}
-					],
-					"sid": 762500931018268
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Peon",
-							"sid": 495772750451333,
-							"parameters": {
-								"instance-variable": "Anger",
-								"comparison": 3,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Peon",
-							"sid": 190693789963414,
-							"parameters": {
-								"instance-variable": "Anger",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 588009184888152
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-drag-start",
-					"objectClass": "Peon",
-					"sid": 695713403772890,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Peon",
-					"sid": 264984272960107,
-					"parameters": {
-						"instance-variable": "Working",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Peon",
-					"sid": 646281339749570,
-					"parameters": {
-						"instance-variable": "Wandering",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "Peon",
-					"sid": 420570874733546,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"state": "disabled"
-					}
-				},
-				{
-					"id": "set-animation-frame",
-					"objectClass": "Curseur",
-					"sid": 143236792540156,
-					"parameters": {
-						"frame-number": "2"
-					}
-				}
-			],
-			"sid": 376769234317832
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-drop",
-					"objectClass": "Peon",
-					"sid": 208098452919237,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "Curseur",
-					"sid": 749662157460349,
-					"parameters": {
-						"frame-number": "0"
-					}
-				}
-			],
-			"sid": 219347709570717,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Peon",
-							"sid": 216252707563560,
-							"parameters": {
-								"object": "TaskZone"
-							},
-							"isInverted": true
+							"sid": 739119543616419,
+							"behaviorType": "DragDrop"
 						}
 					],
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Peon",
-							"sid": 831151258678565,
+							"sid": 937573126733965,
+							"parameters": {
+								"instance-variable": "Working",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Peon",
+							"sid": 545765269689969,
 							"parameters": {
 								"instance-variable": "Wandering",
-								"value": "true"
+								"value": "false"
 							}
 						},
 						{
 							"id": "set-enabled",
 							"objectClass": "Peon",
-							"sid": 758478081982069,
+							"sid": 939947481832976,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"state": "enabled"
+								"state": "disabled"
 							}
 						},
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Peon",
-							"sid": 124240418773634,
+							"id": "set-animation-frame",
+							"objectClass": "Curseur",
+							"sid": 397195899656826,
 							"parameters": {
-								"instance-variable": "Working",
-								"value": "false"
+								"frame-number": "2"
 							}
 						}
 					],
-					"sid": 635889347454117
+					"sid": 740005192642858,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 693546756621895,
+									"parameters": {
+										"object": "TaskZone"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "TaskZone",
+									"sid": 272156060100635,
+									"parameters": {
+										"instance-variable": "Working"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "TaskZone",
+									"sid": 141299533765795,
+									"parameters": {
+										"instance-variable": "Working",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 803254515121532
+						}
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
+							"id": "on-drop",
 							"objectClass": "Peon",
-							"sid": 312127154347070,
-							"parameters": {
-								"object": "TaskZone"
-							}
+							"sid": 644269401071131,
+							"behaviorType": "DragDrop"
 						}
 					],
 					"actions": [
 						{
-							"id": "set-position",
-							"objectClass": "Peon",
-							"sid": 680639074374879,
+							"id": "set-animation-frame",
+							"objectClass": "Curseur",
+							"sid": 754439508605805,
 							"parameters": {
-								"x": "TaskZone.ImagePointX(0)",
-								"y": "TaskZone.ImagePointY(0)"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Peon",
-							"sid": 362080756053783,
-							"parameters": {
-								"instance-variable": "Working",
-								"value": "true"
+								"frame-number": "0"
 							}
 						}
 					],
-					"sid": 478915110362259
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Peon",
-					"sid": 445340948555333,
-					"parameters": {
-						"instance-variable": "Working"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 100131967823306,
-					"parameters": {
-						"variable": "addMultiplier",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 617378223749620,
-			"children": [
+					"sid": 635464829852968,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 874745151289402,
+									"parameters": {
+										"object": "TaskZone"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "TaskZone",
+									"sid": 957075570728716,
+									"parameters": {
+										"instance-variable": "Working"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Peon",
+									"sid": 574573492772314,
+									"parameters": {
+										"instance-variable": "Wandering",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Peon",
+									"sid": 369115793620856,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Peon",
+									"sid": 599679244174692,
+									"parameters": {
+										"instance-variable": "Working",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 491645326975946,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 962325712753360,
+									"parameters": {
+										"object": "TaskZone"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "TaskZone",
+									"sid": 497703558715902,
+									"parameters": {
+										"instance-variable": "Working"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Peon",
+									"sid": 922977473755841,
+									"parameters": {
+										"instance-variable": "Wandering",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Peon",
+									"sid": 506374708798338,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Peon",
+									"sid": 247357983155018,
+									"parameters": {
+										"instance-variable": "Working",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 111267470595407
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Peon",
+									"sid": 104481163162673,
+									"parameters": {
+										"object": "TaskZone"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "TaskZone",
+									"sid": 389559448350926,
+									"parameters": {
+										"instance-variable": "Working"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Peon",
+									"sid": 697609100075023,
+									"parameters": {
+										"x": "TaskZone.ImagePointX(0)",
+										"y": "TaskZone.ImagePointY(0)"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Peon",
+									"sid": 958935143227363,
+									"parameters": {
+										"instance-variable": "Working",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "TaskZone",
+									"sid": 550558937180771,
+									"parameters": {
+										"instance-variable": "Working",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 742892296197308
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 968109897583301
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Peon",
+							"sid": 130070468580149,
+							"parameters": {
+								"instance-variable": "Working"
+							}
 						}
 					],
 					"actions": [
-						{
-							"id": "add-to-instvar",
-							"objectClass": "Peon",
-							"sid": 125545343555626,
-							"parameters": {
-								"instance-variable": "Anger",
-								"value": "0.1"
-							}
-						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 591319743114942,
+							"sid": 424021668796676,
 							"parameters": {
-								"variable": "power",
-								"value": "1*addMultiplier"
+								"variable": "addMultiplier",
+								"value": "1"
 							}
 						}
 					],
-					"sid": 386027904978423,
+					"sid": 556716963287919,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Peon",
-									"sid": 737710678253762,
-									"parameters": {
-										"instance-variable": "Anger",
-										"comparison": 4,
-										"value": "50"
-									}
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 657604356294847
 								}
 							],
 							"actions": [
 								{
-									"id": "set-instvar-value",
+									"id": "add-to-instvar",
 									"objectClass": "Peon",
-									"sid": 755618981451881,
+									"sid": 585471565330787,
 									"parameters": {
-										"instance-variable": "RandomLeave",
-										"value": "random(0,1)"
+										"instance-variable": "Anger",
+										"value": "0.1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 786063449909325,
+									"parameters": {
+										"variable": "power",
+										"value": "1*addMultiplier"
 									}
 								}
 							],
-							"sid": 902374377905789,
+							"sid": 415672159592194,
 							"children": [
 								{
 									"eventType": "block",
@@ -527,112 +620,121 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Peon",
-											"sid": 577053412543006,
+											"sid": 553776361804490,
 											"parameters": {
-												"instance-variable": "RandomLeave",
+												"instance-variable": "Anger",
 												"comparison": 4,
-												"value": "0.95"
+												"value": "50"
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "set-boolean-instvar",
+											"id": "set-instvar-value",
 											"objectClass": "Peon",
-											"sid": 102445936153446,
+											"sid": 110926303833555,
 											"parameters": {
-												"instance-variable": "Wandering",
-												"value": "true"
-											}
-										},
-										{
-											"id": "set-enabled",
-											"objectClass": "Peon",
-											"sid": 314189586462358,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"state": "enabled"
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Peon",
-											"sid": 972105790890990,
-											"parameters": {
-												"instance-variable": "Working",
-												"value": "false"
+												"instance-variable": "RandomLeave",
+												"value": "random(0,1)"
 											}
 										}
 									],
-									"sid": 549820063195573
+									"sid": 991321828129734,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Peon",
+													"sid": 620300405261398,
+													"parameters": {
+														"instance-variable": "RandomLeave",
+														"comparison": 4,
+														"value": "0.95"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "TaskZone",
+													"sid": 190718288760846,
+													"parameters": {
+														"instance-variable": "Working",
+														"value": "false"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Peon",
+													"sid": 814127761949336,
+													"parameters": {
+														"instance-variable": "Wandering",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Peon",
+													"sid": 575012400483603,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Peon",
+													"sid": 735782411476877,
+													"parameters": {
+														"instance-variable": "Working",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 430589770261870
+										}
+									]
 								}
 							]
 						}
 					]
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-dragging",
-					"objectClass": "Peon",
-					"sid": 189472983886526,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [],
-			"sid": 136081692735718,
-			"children": [
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 860956731137301
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-instvar",
+							"id": "is-dragging",
 							"objectClass": "Peon",
-							"sid": 632527124605919,
-							"parameters": {
-								"instance-variable": "Anger",
-								"value": "0.05"
-							}
+							"sid": 373480808774655,
+							"behaviorType": "DragDrop"
 						}
 					],
-					"sid": 911091825562455,
+					"actions": [],
+					"sid": 205271555059590,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Peon",
-									"sid": 602222155808798,
-									"parameters": {
-										"instance-variable": "Anger",
-										"comparison": 4,
-										"value": "75"
-									}
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 587057719471653
 								}
 							],
 							"actions": [
 								{
-									"id": "set-instvar-value",
+									"id": "add-to-instvar",
 									"objectClass": "Peon",
-									"sid": 436145982006306,
+									"sid": 303005033112066,
 									"parameters": {
-										"instance-variable": "RandomLeave",
-										"value": "random(0,1)"
+										"instance-variable": "Anger",
+										"value": "0.05"
 									}
 								}
 							],
-							"sid": 565356845451851,
+							"sid": 268694846851802,
 							"children": [
 								{
 									"eventType": "block",
@@ -640,65 +742,95 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Peon",
-											"sid": 776899051318388,
+											"sid": 632900158892768,
 											"parameters": {
-												"instance-variable": "RandomLeave",
+												"instance-variable": "Anger",
 												"comparison": 4,
-												"value": "0.95"
+												"value": "75"
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "drop",
+											"id": "set-instvar-value",
 											"objectClass": "Peon",
-											"sid": 361930167179241,
-											"behaviorType": "DragDrop"
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Peon",
-											"sid": 613892630251094,
+											"sid": 212279808305493,
 											"parameters": {
-												"instance-variable": "Wandering",
-												"value": "true"
-											}
-										},
-										{
-											"id": "set-enabled",
-											"objectClass": "Peon",
-											"sid": 545880460026937,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"state": "enabled"
-											}
-										},
-										{
-											"id": "set-speed",
-											"objectClass": "Peon",
-											"sid": 177447861840721,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"speed": "50"
-											}
-										},
-										{
-											"id": "add-to-instvar",
-											"objectClass": "Peon",
-											"sid": 118377309196927,
-											"parameters": {
-												"instance-variable": "Anger",
-												"value": "5"
+												"instance-variable": "RandomLeave",
+												"value": "random(0,1)"
 											}
 										}
 									],
-									"sid": 307064155887494
+									"sid": 979389468823423,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Peon",
+													"sid": 106911228440075,
+													"parameters": {
+														"instance-variable": "RandomLeave",
+														"comparison": 4,
+														"value": "0.95"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "drop",
+													"objectClass": "Peon",
+													"sid": 172878764455016,
+													"behaviorType": "DragDrop"
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Peon",
+													"sid": 905290215397454,
+													"parameters": {
+														"instance-variable": "Wandering",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Peon",
+													"sid": 882715980265929,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Peon",
+													"sid": 473104310235651,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "50"
+													}
+												},
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Peon",
+													"sid": 270932908275824,
+													"parameters": {
+														"instance-variable": "Anger",
+														"value": "5"
+													}
+												}
+											],
+											"sid": 117209025385330
+										}
+									]
 								}
 							]
 						}
 					]
 				}
-			]
+			],
+			"sid": 322600451090615
 		},
 		{
 			"eventType": "block",
@@ -898,6 +1030,68 @@
 				}
 			],
 			"sid": 591972577131387
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tasks",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 840956257574145,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TaskZone",
+							"sid": 300259706120648,
+							"parameters": {
+								"instance-variable": "Task",
+								"comparison": 0,
+								"value": "\"AddCoal\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TaskZone",
+							"sid": 595176953943220,
+							"parameters": {
+								"instance-variable": "Working"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 879075097464985,
+							"parameters": {
+								"variable": "charbon",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 691336502335889,
+							"parameters": {
+								"variable": "power",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 847347724251266
+				}
+			],
+			"sid": 444808710946465
 		}
 	],
 	"sid": 840031859771763

@@ -4,7 +4,22 @@
 	"sid": 392660080562384,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Working",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 241846610918187
+		},
+		{
+			"name": "Task",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 955052971469442
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
