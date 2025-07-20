@@ -5,64 +5,100 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
-					"objectClass": "Souris",
-					"sid": 126800967716468,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				},
-				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Souris",
-					"sid": 100756372611146,
+					"sid": 830978605364444,
 					"parameters": {
-						"object": "Startbutton"
+						"object": "ButStart"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 174798426779597,
+					"id": "set-opacity",
+					"objectClass": "ButStart",
+					"sid": 107078048161030,
 					"parameters": {
-						"layout": "Scène 1"
+						"opacity": "70"
 					}
 				}
 			],
-			"sid": 624649461818702
+			"sid": 624649461818702,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Souris",
+							"sid": 150614170347476,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 712799392382619,
+							"parameters": {
+								"layout": "Scène 1"
+							}
+						}
+					],
+					"sid": 402273752039067
+				}
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
-					"objectClass": "Souris",
-					"sid": 901665186646543,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				},
-				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Souris",
-					"sid": 948091793058845,
+					"sid": 744232750166869,
 					"parameters": {
-						"object": "QuitButton"
+						"object": "ButQuit"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "close",
-					"objectClass": "Navigateur",
-					"sid": 347758600382135
+					"id": "set-opacity",
+					"objectClass": "ButQuit",
+					"sid": 393422065454970,
+					"parameters": {
+						"opacity": "70"
+					}
 				}
 			],
-			"sid": 973232071850857
+			"sid": 973232071850857,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Souris",
+							"sid": 686014226122487,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "Navigateur",
+							"sid": 903424692383328
+						}
+					],
+					"sid": 579182040857979
+				}
+			]
 		},
 		{
 			"eventType": "group",
@@ -120,17 +156,17 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Souris",
-							"sid": 813413374921653,
+							"sid": 943833761299237,
 							"parameters": {
-								"object": "Startbutton"
+								"object": "ButStart"
 							}
 						},
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Souris",
-							"sid": 183085066653874,
+							"sid": 847956188341653,
 							"parameters": {
-								"object": "QuitButton"
+								"object": "ButQuit"
 							}
 						}
 					],
@@ -153,18 +189,18 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Souris",
-							"sid": 319770870681164,
+							"sid": 424376824477935,
 							"parameters": {
-								"object": "Startbutton"
+								"object": "ButStart"
 							},
 							"isInverted": true
 						},
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Souris",
-							"sid": 150022262510550,
+							"sid": 225583392770436,
 							"parameters": {
-								"object": "QuitButton"
+								"object": "ButQuit"
 							},
 							"isInverted": true
 						}
@@ -176,6 +212,22 @@
 							"sid": 884394964094339,
 							"parameters": {
 								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "ButQuit",
+							"sid": 976822130045106,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "ButStart",
+							"sid": 452371210273628,
+							"parameters": {
+								"opacity": "100"
 							}
 						}
 					],

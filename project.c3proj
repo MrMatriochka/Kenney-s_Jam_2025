@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -79,13 +86,15 @@
 			"Background",
 			"Background2",
 			"Souris",
-			"Startbutton",
-			"QuitButton",
 			"Navigateur",
 			"Curseur",
 			"Texte",
 			"Baseball",
-			"BarreDeProgression"
+			"BarreDeProgression",
+			"TempBut",
+			"ButStart",
+			"ButQuit",
+			"Texte2"
 		],
 		"subfolders": []
 	},
@@ -128,7 +137,104 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "Kenney Blocks.ttf",
+					"type": "application/font-sfnt",
+					"sid": 900166786940655,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Future Narrow.ttf",
+					"type": "application/font-sfnt",
+					"sid": 989889708913303,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Future.ttf",
+					"type": "application/font-sfnt",
+					"sid": 946020077075632,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney High Square.ttf",
+					"type": "application/font-sfnt",
+					"sid": 873808838986340,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney High.ttf",
+					"type": "application/font-sfnt",
+					"sid": 656405936539276,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Mini Square Mono.ttf",
+					"type": "application/font-sfnt",
+					"sid": 316742726007591,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Mini Square.ttf",
+					"type": "application/font-sfnt",
+					"sid": 450695118859332,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Mini.ttf",
+					"type": "application/font-sfnt",
+					"sid": 902537903517309,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Pixel Square.ttf",
+					"type": "application/font-sfnt",
+					"sid": 467015473845147,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Rocket Square.ttf",
+					"type": "application/font-sfnt",
+					"sid": 401369757280397,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Rocket.ttf",
+					"type": "application/font-sfnt",
+					"sid": 490070651276165,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kenney Pixel.ttf",
+					"type": "application/font-sfnt",
+					"sid": 146405190060226,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

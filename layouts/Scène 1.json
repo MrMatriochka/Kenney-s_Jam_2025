@@ -367,7 +367,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Wandering": true,
-						"Anger": 0,
+						"Anger": 1,
 						"Working": false,
 						"RandomLeave": 0
 					},
@@ -411,8 +411,8 @@
 						"originY": 0.5,
 						"color": [
 							1,
-							1,
-							1,
+							0.9921568627450981,
+							0.9921568627450981,
 							1
 						],
 						"angle": 0,
@@ -433,7 +433,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Wandering": true,
-						"Anger": 0,
+						"Anger": 1,
 						"Working": false,
 						"RandomLeave": 0
 					},
@@ -499,7 +499,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Wandering": true,
-						"Anger": 0,
+						"Anger": 1,
 						"Working": false,
 						"RandomLeave": 0
 					},
@@ -543,8 +543,8 @@
 						"originY": 0.5,
 						"color": [
 							1,
-							1,
-							1,
+							0.9921568627450981,
+							0.9921568627450981,
 							1
 						],
 						"angle": 0,
@@ -565,7 +565,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"Wandering": true,
-						"Anger": 0,
+						"Anger": 1,
 						"Working": false,
 						"RandomLeave": 0
 					},
@@ -609,8 +609,8 @@
 						"originY": 0.5,
 						"color": [
 							1,
-							1,
-							1,
+							0.9921568627450981,
+							0.9921568627450981,
 							1
 						],
 						"angle": 0,

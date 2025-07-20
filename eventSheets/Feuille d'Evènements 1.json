@@ -3,13 +3,33 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Power",
+			"name": "power",
 			"type": "number",
 			"initialValue": "100",
 			"comment": "Niveau de puissance du train",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 872586394756857
+		},
+		{
+			"eventType": "variable",
+			"name": "addMultiplier",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 191708154470651
+		},
+		{
+			"eventType": "variable",
+			"name": "charbon",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 632300146644612
 		},
 		{
 			"eventType": "group",
@@ -237,6 +257,33 @@
 						}
 					],
 					"sid": 762500931018268
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Peon",
+							"sid": 495772750451333,
+							"parameters": {
+								"instance-variable": "Anger",
+								"comparison": 3,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Peon",
+							"sid": 190693789963414,
+							"parameters": {
+								"instance-variable": "Anger",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 588009184888152
 				}
 			]
 		},
@@ -403,7 +450,17 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 100131967823306,
+					"parameters": {
+						"variable": "addMultiplier",
+						"value": "1"
+					}
+				}
+			],
 			"sid": 617378223749620,
 			"children": [
 				{
@@ -423,6 +480,15 @@
 							"parameters": {
 								"instance-variable": "Anger",
 								"value": "0.1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 591319743114942,
+							"parameters": {
+								"variable": "power",
+								"value": "1*addMultiplier"
 							}
 						}
 					],
@@ -652,7 +718,7 @@
 					"objectClass": "System",
 					"sid": 228057740459407,
 					"parameters": {
-						"variable": "Power",
+						"variable": "power",
 						"value": "1"
 					}
 				}
@@ -790,13 +856,48 @@
 				{
 					"id": "set-progress",
 					"objectClass": "BarreDeProgression",
-					"sid": 617766489602256,
+					"sid": 499750929396622,
 					"parameters": {
-						"value": "Power"
+						"value": "power"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Peon",
+					"sid": 642473141415241,
+					"parameters": {
+						"color": "rgbEx(255, 255-(255*(Peon.Anger/100)), 255-(255*(Peon.Anger/100)))"
 					}
 				}
 			],
 			"sid": 517118790923944
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 576737832356304,
+					"parameters": {
+						"variable": "power",
+						"comparison": 5,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 304705605604945,
+					"parameters": {
+						"variable": "power",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 591972577131387
 		}
 	],
 	"sid": 840031859771763
